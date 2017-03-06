@@ -18,7 +18,7 @@ class Route
         $controller_name = $segments[1] ? ucfirst($segments[1]) : $controller_name;
 
         // определение названия метода
-        $method_name = $segments[2] ? : $method_name;
+        $method_name = isset($segments[2]) ? $segments[2] : $method_name;
 
         // подключение контроллера
         $controller_file = $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/' . $controller_name. '.php';

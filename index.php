@@ -1,3 +1,3 @@
 <?php
-
-require_once 'system/core.php';
+error_reporting(E_ALL);
+require_once 'system/Core.php';

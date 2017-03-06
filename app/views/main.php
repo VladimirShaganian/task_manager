@@ -14,13 +14,13 @@
             <div class="thumbnail task">
                 <img src="/uploads/images/<?=$item['image']?>" alt="">
                 <div class="caption">
-                    <?php if($_SESSION['user']):?>
-                        
+                    <?php if(isset($_SESSION['user'])):?>
                         <p class="checkbox">
                             <label>
                                 <input type="checkbox" data-task-id="<?=$item['id']?>" <?=$item['status'] == 1 ? 'checked' : '';?>> Task complete
                             </label>
                         </p>
+                        <hr>
                     <?php endif;?>
                     <h4><span class="label label-success pull-right"><?=$item['status'] > 0 ? 'Success' : ''?></span></h4>
                     <div class="task__user-info">
@@ -29,7 +29,6 @@
                     </div>
                     <br>
                     <p class="task__text"><?=$item['task']?></p>
-
                 </div>
             </div>
         </div>
